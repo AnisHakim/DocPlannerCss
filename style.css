@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 .img {
   padding: 1.33em 0;
   width: 268px;
   height: 33px;
   cursor: pointer;
-}
-.dropdown {
 }
 
 .main-header {
@@ -111,8 +110,7 @@ h4 {
 .grid div {
   padding: 10px;
 }
-.col-2 {
-}
+
 .lead p {
   color: #747474;
   font-family: Roboto, Arial, sans-serif;
@@ -162,13 +160,25 @@ h4 {
 .div3:hover {
   background-color: #261b34;
 }
+@keyframes cssAnimation {
+  to {
+    visibility: visible;
+  }
+}
+
 .div1 {
+  animation: cssAnimation 1s 0.5s forwards;
+  visibility: hidden;
   background-color: #00ccb1;
 }
 .div2 {
+  animation: cssAnimation 0s 1s forwards;
+  visibility: hidden;
   background-color: #3d83df;
 }
 .div3 {
+  animation: cssAnimation 1s 1.5s forwards;
+  visibility: hidden;
   background-color: #1b2734;
 }
 .divone {
@@ -238,18 +248,53 @@ header p {
 }
 .stats {
   background: #e5faf8;
-  background-image: linear-gradient(
-      -45deg,
-      rgba(0, 204, 177, 0.01) 5%,
-      rgba(61, 199, 223, 0.1)
-    ),
-    url('https://www.docplanner.com/img/logo.png');
+  background-image: url('https://www.docplanner.com/img/logo.png');
   background-repeat: no-repeat;
   background-size: 500px;
-  height: 500px;
-  padding: 1.875em 0 0.625em;
-  overflow: hidden;
-  margin: 3.125rem auto 5.5rem;
+  background-position-x: 100px;
+  background-position-y: 220px;
+}
+.stats h1 {
+  line-height: 44px;
+  font-size: 34px;
+  color: #00b39b;
+  font-family: Work Sans, Arial, sans-serif;
+  width: 450px;
+  height: 88px;
+  margin: 30px 20px;
+}
+.box {
+  margin: 10px;
+  background-color: white;
+  height: 230px;
+  width: 220px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px 0px;
+}
+.box p {
+  max-width: 170px;
+  margin: 0 auto;
+}
+.box h3 {
+  margin: 0 auto;
+  max-width: 170px;
+  color: #00b39b;
+}
+.stats p {
+  margin: 20px;
+  color: #747474;
+  width: 450px;
+}
+@media screen and (max-width: 700px) {
+  .subStats {
+    flex-direction: column;
+  }
+}
+.subStats {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1015px;
 }
 
 .join-us__header {
@@ -290,8 +335,12 @@ header .btn {
 }
 .fontSection div {
   padding: 20px;
-  margin: 20px;
   background-color: transparent;
+}
+@media screen and (max-width: 600px) {
+  .fontSection {
+    flex-direction: column;
+  }
 }
 
 .fontSection {
@@ -300,7 +349,7 @@ header .btn {
   margin: 0 auto;
 }
 .fontSection h1 {
-  width: 170px;
+  width: 200px;
   color: #00b39b;
   font-family: Work Sans, Arial, sans-serif;
 }
@@ -310,4 +359,8 @@ header .btn {
 
 .fontAwesome {
   color: #747474;
+}
+
+div i {
+  padding: 0 20px;
 }
